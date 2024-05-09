@@ -36,6 +36,7 @@ openai==1.26.0
 packaging==23.2
 pandas==2.1.2
 Pillow==10.1.0
+plotly==5.22.0
 protobuf==4.24.4
 pyarrow==13.0.0
 pyautogen==0.2.27

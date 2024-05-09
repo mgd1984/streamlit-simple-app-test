@@ -13,7 +13,7 @@ def main():
     df = pd.DataFrame(data)
 
     # Streamlit Interface
-    st.title('LLM Context Window Length vs. Cost-per-Token')
+    # st.title('LLM Context Window Length vs. Cost-per-Token')
 
     # Plotting
     fig = px.scatter(df, x="Context Window Length", y="Cost per Token (USD)", 

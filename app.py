@@ -13,7 +13,7 @@ def main():
     df = pd.DataFrame(data)
 
     # Streamlit Interface
-    st.title('Relationship Between Context Window Length and Cost-per-Token in LLMs')
+    st.title('LLM Context Window Length vs. Cost-per-Token')
 
     # Plotting
     fig = px.scatter(df, x="Context Window Length", y="Cost per Token (USD)", 
@@ -27,5 +27,23 @@ def main():
                 color_continuous_scale="viridis")
     st.plotly_chart(fig)
 
+def page2():
+    st.title('Page 2')
+    st.write('This is page 2')
+
+def page3():
+    st.title('Page 3')
+    st.write('This is page 3')
+
 if __name__ == '__main__':
-    main()
+    st.sidebar.title('Navigation')
+    pages = ['Main', 'Page 2', 'Page 3']
+    page = st.selectbox('Go to', pages)
+
+    if page == 'Main':
+        main()
+    elif page == 'Page 2':
+        page2()
+    elif page == 'Page 3':
+        page3()
+

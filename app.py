@@ -3,6 +3,18 @@ import pandas as pd
 
 import plotly.express as px
 
+# st.set_page_config(
+#     page_title="Ex-stream-ly Cool App",
+#     page_icon="🧊",
+#     layout="centered",
+#     initial_sidebar_state="collapsed",
+#     menu_items={
+#         'Get Help': 'https://www.extremelycoolapp.com/help',
+#         'Report a bug': "https://www.extremelycoolapp.com/bug",
+#         'About': "# This is a header. This is an *extremely* cool app!"
+#     }
+# )
+
 def main():
     data = {
         "Model": ["GPT-3", "GPT-3.5 Turbo", "GPT-4", "GPT-4 Turbo", "GPT-5", "GPT-5-Turbo"],
@@ -13,7 +25,7 @@ def main():
     df = pd.DataFrame(data)
 
     # Streamlit Interface
-    # st.title('LLM Context Window Length vs. Cost-per-Token')
+    st.title('Building with Streamlit is fun!')
 
     # Plotting
     fig = px.scatter(df, x="Context Window Length", y="Cost per Token (USD)", 
